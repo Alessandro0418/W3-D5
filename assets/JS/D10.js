@@ -322,15 +322,15 @@ const movies = [
   Scrivi una funzione chiamata "deleteProp" che riceve un oggetto e una stringa come parametri; deve ritornare l'oggetto fornito dopo aver eliminato
   in esso la proprietà chiamata come la stringa passata come secondo parametro.
   */
+const deleteProp = function (obj, str) {
+  delete obj[str];
+  return obj;
+};
+
 const person = {
   name: "Mario",
   surname: "Rossi",
   age: 20,
-};
-
-const deleteProp = function (obj, str) {
-  delete obj[str];
-  return obj;
 };
 
 console.log(deleteProp(person, "age"));
